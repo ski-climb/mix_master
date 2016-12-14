@@ -1,13 +1,3 @@
-
-# given that artists exist in the database
-# when I visit the artist songs index
-# and I click on "New song"
-# and I fill in the title
-# and I click on "Create Song"
-# then I should be on the song page
-# and I should see a link to the song artist's individual page
-
-
 require 'rails_helper'
 
 RSpec.feature "Songs" do
