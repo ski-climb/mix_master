@@ -9,3 +9,8 @@ h1 {
   width: 50%;
   margin: 0 auto;
 }
+
+// This is a hack to not show the bootstrap_form_for labels
+.required {
+  display: none;
+}
