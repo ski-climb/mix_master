@@ -30,7 +30,6 @@ gem 'unicorn'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'pbcopy'
 
 group :production do
   # Gem for Heroku debugging (logging output)
@@ -45,6 +44,7 @@ group :development, :test do
   gem 'launchy'
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
+  gem 'pbcopy'
 end
 
 group :development do
