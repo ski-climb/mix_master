@@ -1,2 +1,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+h1 {
+  margin-bottom: 35px;
+}
+
+.wrapper {
+  width: 50%;
+  margin: 0 auto;
+}
