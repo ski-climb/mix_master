@@ -1,13 +1,16 @@
-<h1>Make a new playlist</h1>
+<div class="wrapper">
+  <h1>Make a new playlist</h1>
 
-<%= form_for @playlist do |f| %>
-  <%= f.text_field :name %>
-
-  <% @songs.each do |song| %>
-    <div>
-      <%= check_box_tag(:song_ids, song.id, false, :name => 'playlist[song_ids][]', id: "song-#{song.id}") %>
-      <%= song.title %>
-    </div>
+  <%= bootstrap_form_for @playlist do |f| %>
+    <%= f.text_field :name %>
+  
+    <% @songs.each do |song| %>
+      <div>
+        <%= check_box_tag(:song_ids, song.id, false, :name => 'playlist[song_ids][]', id: "song-#{song.id}") %>
+        <%= song.title %>
+      </div>
+    <% end %>
+    <%= f.submit "Save", class: "btn btn-success" %>
+    <%= link_to 'Cancel', class: "btn btn-danger" %>
   <% end %>
-  <%= f.submit %>
-<% end %>
+</div>

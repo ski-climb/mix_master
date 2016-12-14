@@ -12,7 +12,7 @@ RSpec.feature "Playlists" do
       fill_in 'playlist_name', with: playlist_name
       check("song-#{song_1.id}")
       check("song-#{song_3.id}")
-      click_on "Create Playlist"
+      click_on "Save"
 
       playlist = Playlist.find_by(name: playlist_name)
       expect(page).to have_current_path playlist_path(playlist)
