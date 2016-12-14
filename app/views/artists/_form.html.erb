@@ -8,12 +8,10 @@
   </ul>
 <% end %>
 
-<%= form_for @artist do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<%= bootstrap_form_for @artist do |f| %>
 
-  <%= f.label :image_path %>
-  <%= f.text_field :image_path %>
+  <%= f.text_field :name, hide_label: true, placeholder: "Name" %>
+  <%= f.text_field :image_path, hide_label: true, placeholder: "Image path" %>
 
   <%= f.submit %>
 <% end %>
