@@ -8,7 +8,7 @@ RSpec.feature "Artists" do
 
       fill_in "artist_name", with: ""
       fill_in "artist_image_path", with: ""
-      click_on 'Create Artist'
+      click_on 'Save'
 
       expect(page).to have_content "Name can't be blank"
       expect(Artist.count).to eq 0
@@ -23,7 +23,7 @@ RSpec.feature "Artists" do
 
       fill_in "artist_name", with: artist_name
       fill_in "artist_image_path", with: artist_image_path
-      click_on 'Create Artist'
+      click_on 'Save'
 
       artist = Artist.find_by(name: artist_name)
       expect(page).to have_current_path(artist_path(artist))

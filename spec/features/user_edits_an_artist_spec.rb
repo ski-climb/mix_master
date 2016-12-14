@@ -12,7 +12,7 @@ RSpec.feature "Artists" do
       expect(find_field('artist_image_path').value).to eq artist.image_path
 
       fill_in "artist_name", with: ""
-      click_on "Update Artist"
+      click_on "Save"
 
       expect(page).to have_content "Name can't be blank"
       expect(Artist.find(artist.id).name).to eq "artist name"
@@ -28,7 +28,7 @@ RSpec.feature "Artists" do
       expect(find_field('artist_image_path').value).to eq artist.image_path
 
       fill_in "artist_name", with: "NEW NAME"
-      click_on "Update Artist"
+      click_on "Save"
 
       expect(page).to have_content "NEW NAME"
       expect(page).to have_css "img[src=\"#{artist.image_path}\"]"
