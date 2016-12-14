@@ -51,6 +51,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
   gem 'pbcopy'
+  gem 'database_cleaner'
 end
 
 group :development do

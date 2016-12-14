@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.feature "Artists" do
   context "Creating a new artist" do
     scenario "does not save anything to the database when attributes are invalid" do
-      visit '/artists'
+      visit artists_path
       click_on 'New artist'
 
       fill_in "artist_name", with: ""
@@ -18,7 +18,7 @@ RSpec.feature "Artists" do
       artist_name = "Robert Morely"
       artist_image_path = "http://cps-static.rovicorp.com/3/JPG_400/MI0003/146/MI0003146038.jpg"
 
-      visit '/artists'
+      visit artists_path
       click_on 'New artist'
 
       fill_in "artist_name", with: artist_name

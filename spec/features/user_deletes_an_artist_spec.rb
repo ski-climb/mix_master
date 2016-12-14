@@ -1,11 +1,3 @@
-
-# given that some artists exist in the database
-# when I visit the show page for an artist
-# and I click on 'Delete'
-# then I expect to be on the index page
-# and the artist should not show up
-# and it should not be in the database
-
 require 'rails_helper'
 
 RSpec.feature "Artists" do
@@ -14,7 +6,7 @@ RSpec.feature "Artists" do
       artist_1 = create(:artist)
       tone_loc = create(:artist, name: "Tone Loc")
       artist_3 = create(:artist)
-      visit '/artists'
+      visit artists_path
 
       within "#artist_#{tone_loc.id}" do
         click_on "Tone Loc"
