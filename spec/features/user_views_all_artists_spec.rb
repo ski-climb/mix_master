@@ -5,7 +5,7 @@ RSpec.feature "Artists" do
   context "Viewing all artists" do
     scenario "displays all artists' information" do
       artist_1, artist_2, artist_3 = create_list(:artist, 3)
-      visit '/artists'
+      visit artists_path
 
       expect(page).to have_content artist_1.name
       expect(page).to have_content artist_2.name
@@ -14,7 +14,7 @@ RSpec.feature "Artists" do
 
     scenario "provides links to the show page for each artist" do
       create(:artist, name: "Tone Loc")
-      visit '/artists'
+      visit artists_path
       tone_loc = Artist.find_by(name: "Tone Loc")
       click_on "Tone Loc"
 
