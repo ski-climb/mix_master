@@ -36,6 +36,7 @@ gem 'unicorn'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'faker'
 
 group :production do
   # Gem for Heroku debugging (logging output)
@@ -52,7 +53,6 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'pbcopy'
   gem 'database_cleaner'
-  gem 'faker'
 end
 
 group :development do
