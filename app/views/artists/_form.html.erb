@@ -1,12 +1,4 @@
-<% if @artist.errors.any? %>
-  <h4><%= pluralize(@artist.errors.count, 'error') %> prevented this record from being saved:</h4>
-
-  <ul>
-    <% @artist.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-<% end %>
+<%= render partial: 'shared/errors', locals: { target: @artist } %>
 
 <%= bootstrap_form_for @artist do |f| %>
 

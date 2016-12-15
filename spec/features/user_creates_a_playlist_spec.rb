@@ -10,8 +10,8 @@ RSpec.feature "Playlists" do
       click_on "New Playlist"
 
       fill_in 'playlist_name', with: playlist_name
-      check("song-#{song_1.id}")
-      check("song-#{song_3.id}")
+      check(song_1.title)
+      check(song_3.title)
       click_on "Save"
 
       playlist = Playlist.find_by(name: playlist_name)
