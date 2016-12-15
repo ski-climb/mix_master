@@ -1,5 +1,7 @@
 FactoryGirl.define do
   factory :playlist do
-    name "MyString"
+    sequence :name do |n|
+      "Playlist #{n}"
+    end
   end
 end

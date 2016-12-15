@@ -14,7 +14,7 @@ RSpec.feature "Songs" do
 
       song = Song.find_by(title: "Song Title")
       expect(page).to have_current_path(song_path(song))
-      expect(page).to have_link artist.name, artist_path(artist)
+      expect(page).to have_link artist.name, href: artist_path(artist)
     end
 
     scenario "when the attributes are invalid nothing is saved to the database" do

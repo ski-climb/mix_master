@@ -1,9 +1,11 @@
 FactoryGirl.define do
 
+  name = Faker::GameOfThrones.character
+
   factory :artist do
     sequence :name do |n|
-      "First and Last #{n}"
+      Faker::GameOfThrones.character + " #{n}"
     end
-    image_path "http://cps-static.rovicorp.com/3/JPG_400/MI0003/146/MI0003146038.jpg"
+    image_path "https://robohash.org/#{name}"
   end
 end

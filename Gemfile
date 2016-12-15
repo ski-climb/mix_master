@@ -52,6 +52,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'pbcopy'
   gem 'database_cleaner'
+  gem 'faker'
 end
 
 group :development do

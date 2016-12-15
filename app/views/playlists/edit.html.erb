@@ -1,0 +1,11 @@
+<div class="wrapper">
+  <h1>Update Playlist</h1>
+  <%= bootstrap_form_for @playlist do |f| %>
+    <%= f.text_field :name %>
+  
+    <%= f.collection_check_boxes :song_ids, Song.all, :id, :title, hide_label: true %>
+
+    <%= f.submit "Save", class: "btn btn-success" %>
+    <%= link_to 'Cancel', :back, class: "btn btn-danger" %>
+  <% end %>
+</div>
